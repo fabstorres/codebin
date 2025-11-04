@@ -14,7 +14,7 @@ import (
 
 func main() {
 	app := server.New()
-	err := app.Initalize()
+	err := app.Initialize()
 
 	if err != nil {
 		log.Fatalf("%s", err)

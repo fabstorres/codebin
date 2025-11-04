@@ -12,6 +12,6 @@ func init() {
 
 func register(a AppContext, r *mux.Router) {
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello World"))
+		a.Renderer().Render(w, "home/index.html", nil)
 	}).Methods("GET")
 }

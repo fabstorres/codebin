@@ -2,11 +2,13 @@ package routes
 
 import (
 	"github.com/fabstorres/codebin/internal/config"
+	"github.com/fabstorres/codebin/internal/render"
 	"github.com/gorilla/mux"
 )
 
 type AppContext interface {
 	Config() *config.Config
+	Renderer() *render.Renderer
 }
 
 type RouteRegistrar func(AppContext, *mux.Router)
